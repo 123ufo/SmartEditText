@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SmartEditText">
+        <attr name="smart_maxLength" format="integer"/>
+        <attr name="smart_cornerTextColor" format="color"/>
+        <attr name="smart_textColor" format="color"/>
+        <attr name="smart_textSize" format="dimension"/>
+    </declare-styleable>
+</resources>
