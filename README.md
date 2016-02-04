@@ -17,12 +17,13 @@
 ###属性：
 
 	<resources>
-    <declare-styleable name="SmartEditText">
-        <attr name="smart_maxLength" format="integer"/>
-        <attr name="smart_cornerTextColor" format="color"/>
-        <attr name="smart_textColor" format="color"/>
-        <attr name="smart_textSize" format="dimension"/>
-    </declare-styleable>
+	    <declare-styleable name="SmartEditText">
+	        <attr name="smart_maxLength" format="integer"/>
+	        <attr name="smart_cornerTextColor" format="color"/>
+	        <attr name="smart_textColor" format="color"/>
+	        <attr name="smart_textSize" format="dimension"/>
+	        <attr name="smart_hint" format="reference"/>
+	    </declare-styleable>
 	</resources>
 
 ###代码：

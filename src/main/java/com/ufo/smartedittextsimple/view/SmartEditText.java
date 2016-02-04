@@ -1,4 +1,4 @@
-package com.ufo.smartedittextsimple.view;
+package com.ufo.timetable_2.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -14,8 +14,7 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.ufo.smartedittextsimple.R;
-
+import com.ufo.timetable_2.R;
 
 /**
  * 作者：XuDiWei
@@ -39,6 +38,7 @@ public class SmartEditText extends FrameLayout implements TextWatcher {
     private int textColor;
     private int textSize;
     private OnInputOutLengthListener listener;
+    private int hintRes;
 
     public SmartEditText(Context context) {
         super(context);
@@ -52,6 +52,7 @@ public class SmartEditText extends FrameLayout implements TextWatcher {
         cornerTextColor = typedArray.getColor(R.styleable.SmartEditText_smart_cornerTextColor, DEFAULT_COLOR);
         textColor = typedArray.getColor(R.styleable.SmartEditText_smart_textColor, DEFAULT_COLOR);
         textSize = typedArray.getDimensionPixelSize(R.styleable.SmartEditText_smart_textSize, 20);
+        hintRes = typedArray.getResourceId(R.styleable.SmartEditText_smart_hint, -1);
         typedArray.recycle();
         initView();
     }
@@ -62,6 +63,10 @@ public class SmartEditText extends FrameLayout implements TextWatcher {
         editText.setBackgroundDrawable(this.getBackground());
         editText.setTextColor(textColor);
         editText.setTextSize(textSize);
+        if (hintRes != -1) {
+            editText.setHint(hintRes);
+            editText.setHintTextColor(Color.GRAY);
+        }
         editText.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
         editText.addTextChangedListener(this);
         this.addView(editText);
@@ -154,6 +159,16 @@ public class SmartEditText extends FrameLayout implements TextWatcher {
 
     public void setOnInputOutLengthListener(OnInputOutLengthListener listener) {
         this.listener = listener;
+    }
+
+    public int getHintRes() {
+        return hintRes;
+    }
+
+    public void setHintRes(int hintRes) {
+        this.hintRes = hintRes;
+        editText.setHint(this.hintRes);
+        editText.setHintTextColor(Color.GRAY);
     }
 
     private static int dipTodx(Context context, int dip) {
