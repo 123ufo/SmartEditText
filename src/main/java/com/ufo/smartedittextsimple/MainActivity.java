@@ -1,16 +1,11 @@
 package com.ufo.smartedittextsimple;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.ufo.smartedittextsimple.view.SmartEditText;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         smartEditText.setOnInputOutLengthListener(new SmartEditText.OnInputOutLengthListener() {
             @Override
             public void onInputOutLength(int length) {
-                Toast.makeText(MainActivity.this, "out Length:"+length, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "out Length:" + length, Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -1,4 +1,4 @@
-package com.ufo.timetable_2.view;
+package com.ufo.smartedittextsimple.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -14,7 +14,8 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.ufo.timetable_2.R;
+import com.ufo.smartedittextsimple.R;
+
 
 /**
  * 作者：XuDiWei
